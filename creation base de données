@@ -3,6 +3,7 @@ ethnie='White'
 
 entetes=[u'photo', u'age', u'gender', u'ethnie']
 valeurs=[]
+#on obtient date_photo et data_naissance avant
 valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), gender, ethnie])
 
 dataset=open('dataset.csv','w')
