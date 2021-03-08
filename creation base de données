@@ -1,5 +1,5 @@
-gender='man'
-ethnie='blanc'
+gender='M'
+ethnie='White'
 
 entetes=[u'photo', u'age', u'gender', u'ethnie']
 valeurs=[]
