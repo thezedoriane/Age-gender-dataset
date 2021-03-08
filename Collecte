@@ -8,7 +8,7 @@ def getdata(url):
 htmldata = getdata("https://fr.wikipedia.org/wiki/Johnny_Depp")  
 soup = BeautifulSoup(htmldata, 'html.parser') 
 
-#date de naissance: mois année
+#date de naissance: année
 ch9=soup.get_text()
 deb=ch9.index("Naissance en")
 naissance=ch9[deb:deb+40]
@@ -19,17 +19,13 @@ def fin_date(date):
     return n
 dnait=naissance[13:fin_date(naissance)]
 date_naissance=dnait[-4:]
-print(date_naissance)
 
 #image de la personne
 image_interet=None
 for item in soup.find_all('img'): 
     if image_interet==None and item['src'].endswith('.jpg'):
         image_interet=item['src']
-        print(image_interet)
         
 #date photo
 fin=ch9[5000:10000].index("Nom de naissance")
 date_photo=ch9[5000+fin-21:5000+fin-17]
-print(date_photo)
-         
