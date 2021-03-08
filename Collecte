@@ -1,0 +1,33 @@
+import requests  
+from bs4 import BeautifulSoup 
+    
+def getdata(url):  
+    r = requests.get(url)  
+    return r.text  
+    
+htmldata = getdata("https://fr.wikipedia.org/wiki/Johnny_Depp")  
+soup = BeautifulSoup(htmldata, 'html.parser') 
+
+#date de naissance: mois année
+ch9=soup.get_text()
+deb=ch9.index("Naissance en")
+naissance=ch9[deb:deb+40]
+def fin_date(date):
+    n=0
+    while date[n]!='"':
+        n+=1
+    return n
+dnait=naissance[13:fin_date(naissance)]
+print(dnait)
+
+#image de la personne
+image_interet=None
+for item in soup.find_all('img'): 
+    if image_interet==None and item['src'].endswith('.jpg'):
+        image_interet=item['src']
+        print(image_interet)
+        
+#date photo
+fin=ch9[5000:10000].index("Nom de naissance")
+print(ch9[5000+fin-21:5000+fin-15])
+         
