@@ -1,0 +1,15 @@
+gender='man'
+ethnie='blanc'
+
+entetes=[u'photo', u'age', u'gender', u'ethnie']
+valeurs=[]
+valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), gender, ethnie])
+
+dataset=open('dataset.csv','w')
+ligneEntete = ";".join(entetes) + "\n"
+dataset.write(ligneEntete)
+for valeur in valeurs:
+     ligne = ";".join(valeur) + "\n"
+     dataset.write(ligne)
+
+dataset.close()
