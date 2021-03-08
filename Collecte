@@ -18,7 +18,8 @@ def fin_date(date):
         n+=1
     return n
 dnait=naissance[13:fin_date(naissance)]
-print(dnait)
+date_naissance=dnait[-4:]
+print(date_naissance)
 
 #image de la personne
 image_interet=None
@@ -29,5 +30,6 @@ for item in soup.find_all('img'):
         
 #date photo
 fin=ch9[5000:10000].index("Nom de naissance")
-print(ch9[5000+fin-21:5000+fin-15])
+date_photo=ch9[5000+fin-21:5000+fin-17]
+print(date_photo)
          
