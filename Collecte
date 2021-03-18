@@ -5,7 +5,9 @@ def getdata(url):
     r = requests.get(url)  
     return r.text  
     
-htmldata = getdata("https://fr.wikipedia.org/wiki/Johnny_Depp")  
+print('donner une adresse URL')
+#ex avec https://fr.wikipedia.org/wiki/Johnny_Depp
+htmldata=getdata(str(input())) 
 soup = BeautifulSoup(htmldata, 'html.parser') 
 
 #date de naissance: année
