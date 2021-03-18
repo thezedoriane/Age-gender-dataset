@@ -1,5 +1,7 @@
-gender='M'
-ethnie='White'
+print('Quel est le genre ? Noter: H ou W')
+genre=str(input())
+print("Quel est l'ethnie ?")
+eth=str(input())
 
 entetes=[u'photo', u'age', u'gender', u'ethnie']
 valeurs=[]
