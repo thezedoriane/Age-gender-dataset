@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>open_csv</title>
+
+    </head>
+    <body>
+
+        <div>
+
+		
+		<?php 
+			$file = fopen('dataset.csv','r'); 
+			while ($data = fgetcsv($file)) { 
+			//print_r($data); 
+				$goods_list[] = $data;
+			}
+			//print_r($goods_list);
+			foreach ($goods_list as $arr){
+			if ($arr[0]!=""){
+			echo $arr[0]."<br>";
+			}
+			} 			
+			
+			//echo $goods_list[1][0];
+			fclose($file);
+?>
+
+        </div>
+
+  </body>
+
+</html>
