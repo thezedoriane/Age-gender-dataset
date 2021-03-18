@@ -18,7 +18,10 @@ def fin_date(date):
         n+=1
     return n
 dnait=naissance[13:fin_date(naissance)]
-date_naissance=dnait[-4:]
+date_naissance=dnait.strip(' ')
+date_naissance=date_naissance.split(' ')
+date_naissance=date_naissance[1]
+print(date_naissance)
 
 #image de la personne
 image_interet=None
