@@ -1,19 +1,20 @@
 import requests  
 from bs4 import BeautifulSoup 
+import csv
+
     
 def getdata(url):  
     r = requests.get(url)  
     return r.text  
     
-print('donner une adresse URL')
-#ex avec https://fr.wikipedia.org/wiki/Johnny_Depp
-htmldata=getdata(str(input())) 
+htmldata = getdata("https://fr.wikipedia.org/wiki/Johnny_Depp")  
 soup = BeautifulSoup(htmldata, 'html.parser') 
 
 #date de naissance: année
 ch9=soup.get_text()
 deb=ch9.index("Naissance en")
 naissance=ch9[deb:deb+40]
+naissance.strip(' ')
 def fin_date(date):
     n=0
     while date[n]!='"':
@@ -30,10 +31,11 @@ image_interet=None
 for item in soup.find_all('img'): 
     if image_interet==None and item['src'].endswith('.jpg'):
         image_interet=item['src']
+        print(image_interet)
         
-#date photo:annee
+#date photo: année
 fin=ch9[5000:10000].index("Nom de naissance")
-date_photo=ch9[5000+fin-21:5000+fin-17]
-print(date_photo)
+datepht=ch9[5000+fin-21:5000+fin-17] #faut chercher un entier
+print(datepht)
 
-age = int(date_photo)-int(date_naissance)
+age=int(datepht)-int(date_naissance)
