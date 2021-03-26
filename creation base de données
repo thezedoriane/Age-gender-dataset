@@ -1,18 +1,17 @@
-print('Quel est le genre ? Noter: H ou W')
+print('Quel est le genre ? Noter: H ou F')
 genre=str(input())
-print("Quel est l'ethnie ?")
+print("Quel est l'ethnie ? Entrer Blanc, Noir, Indien, Asie de l'Est, Asie du Sud-Est, Moyen-Orient ou Latino")
 ethnie=str(input())
 
 entetes=[u'photo', u'age', u'gender', u'ethnie']
 valeurs=[]
 #on obtient date_photo et data_naissance avant
-valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), genre, ethnie])
+valeurs.append([image_interet, str(age), genre, ethnie])
 
-dataset=open('dataset.csv','w') #ligne a mettre uniquement lors de la création du fichier csv
-dataset=open('dataset.csv','a') #a mettre pour ajouter des lignes au fichier csv existant
+dataset=open('dataset.csv','a')
 
-ligneEntete = ";".join(entetes) + "\n" #uniquement lors de la creation du fichier csv
-dataset.write(ligneEntete)             #uniquement lors de la creation du fichier csv
+#ligneEntete = ";".join(entetes) + "\n" #uniquement lors de la creation du fichier csv mettre en commentaire après
+#dataset.write(ligneEntete)             #uniquement lors de la creation du fichier csv mettre en commentaire après
 
 for valeur in valeurs:
      ligne = ";".join(valeur) + "\n"
