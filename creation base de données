@@ -1,12 +1,12 @@
 print('Quel est le genre ? Noter: H ou W')
 genre=str(input())
 print("Quel est l'ethnie ?")
-eth=str(input())
+ethnie=str(input())
 
 entetes=[u'photo', u'age', u'gender', u'ethnie']
 valeurs=[]
 #on obtient date_photo et data_naissance avant
-valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), gender, ethnie])
+valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), genre, ethnie])
 
 dataset=open('dataset.csv','w')
 ligneEntete = ";".join(entetes) + "\n"
