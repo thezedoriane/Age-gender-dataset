@@ -8,9 +8,12 @@ valeurs=[]
 #on obtient date_photo et data_naissance avant
 valeurs.append([image_interet, str(int(date_photo)-int(date_naissance)), genre, ethnie])
 
-dataset=open('dataset.csv','w')
-ligneEntete = ";".join(entetes) + "\n"
-dataset.write(ligneEntete)
+dataset=open('dataset.csv','w') #ligne a mettre uniquement lors de la création du fichier csv
+dataset=open('dataset.csv','a') #a mettre pour ajouter des lignes au fichier csv existant
+
+ligneEntete = ";".join(entetes) + "\n" #uniquement lors de la creation du fichier csv
+dataset.write(ligneEntete)             #uniquement lors de la creation du fichier csv
+
 for valeur in valeurs:
      ligne = ";".join(valeur) + "\n"
      dataset.write(ligne)
