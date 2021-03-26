@@ -31,6 +31,6 @@ for item in soup.find_all('img'):
     if image_interet==None and item['src'].endswith('.jpg'):
         image_interet=item['src']
         
-#date photo
+#date photo:annee
 fin=ch9[5000:10000].index("Nom de naissance")
 date_photo=ch9[5000+fin-21:5000+fin-17]
