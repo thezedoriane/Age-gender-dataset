@@ -22,6 +22,7 @@ def fin_date(date):
     while date[n]!='"':
         n+=1
     return n
+    
 dnait=naissance[13:fin_date(naissance)]
 date_naissance=dnait.strip(' ')
 date_naissance=date_naissance.split(' ')
@@ -37,7 +38,7 @@ for item in soup.find_all('img'):
         
 #date photo: année
 fin=ch9[5000:10000].index("Nom de naissance")
-datepht=ch9[5000+fin-21:5000+fin-17] #faut chercher un entier
-print(datepht)
+date_photo=ch9[5000+fin-21:5000+fin-17] #faut chercher un entier
+print(date_photo)
 
-age=int(datepht)-int(date_naissance)
+age=int(date_photo)-int(date_naissance)
