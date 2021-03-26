@@ -34,3 +34,6 @@ for item in soup.find_all('img'):
 #date photo:annee
 fin=ch9[5000:10000].index("Nom de naissance")
 date_photo=ch9[5000+fin-21:5000+fin-17]
+print(date_photo)
+
+age = int(date_photo)-int(date_naissance)
