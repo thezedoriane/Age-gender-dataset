@@ -8,11 +8,13 @@
 
 <body>
 <div class="bienvenue">
-	<h1 style="font-size:300%;">Welcome to our Age Gender site !<h1>
+	<h1 style="font-size:300%;">Bienvenue sur notre site !<h1>
 	</br>
 	</br>
-	<p style="font-size:70%;">By clicking on the button below you can select photos based on gender, age and ethnicity of the people in the photos.</p>
-	<div> <a href="Age_gender.php">Select photos</a> </div>
+	<p style="font-size:70%;">En cliquant sur ses boutons vous pouvez regardez des photos en fonction de leur caractéristiques ou bien les modifier pour nous aider !</p>
+	<div> <a href="Age_gender.php">Regarder des photos</a> </div>
+	</br>
+	<div> <a href="GenderAge.php">Modifier les caractéristiques des photos</a> </div>
 </div>
 </body>
 </html>
