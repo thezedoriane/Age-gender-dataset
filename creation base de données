@@ -10,8 +10,9 @@ valeurs.append([image_interet, str(age), genre, ethnie])
 
 dataset=open('dataset.csv','a')
 
-#ligneEntete = ";".join(entetes) + "\n" #uniquement lors de la creation du fichier csv mettre en commentaire après
-#dataset.write(ligneEntete)             #uniquement lors de la creation du fichier csv mettre en commentaire après
+#si on veut entrer le titre des colonnes mettre ca lors de la 1ere execution puis le mettre en commentaire 
+#ligneEntete = ";".join(entetes) + "\n" 
+#dataset.write(ligneEntete)             
 
 for valeur in valeurs:
      ligne = ";".join(valeur) + "\n"
