@@ -34,7 +34,7 @@ table, th, td {
 	<input type='radio' id='homme' name='gender' value='homme'
          checked>
   <label for='homme'>Homme</label><br>
-  <input type='radio' id'femme' name='gender' value='femme'
+  <input type='radio' id='femme' name='gender' value='femme'
          checked>
   <label for='woman'>Femme</label><br>
   <p><button type='submit' name='changerG'> submit </button></p>
