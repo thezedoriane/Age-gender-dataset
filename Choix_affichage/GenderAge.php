@@ -29,7 +29,7 @@ table, th, td {
 					echo "<td>". $num."</td><td><img src='https:".$ligne[0]."' alt='photo'></td>
 					<td>".$ligne[1]."</td> 
 					<td> ".$ligne[2]."</td> <td> ".$ligne[3]."</td>
-					<td> <div> <form method='post' action='traitement.php'>
+					<td> <form method='post' action='traitement.php'>
 	<label for='gender'>Choisissez un genre:</label><br>
 	<input type='radio' id='homme' name='gender' value='homme'
          checked>
