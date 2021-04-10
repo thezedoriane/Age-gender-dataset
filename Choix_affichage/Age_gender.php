@@ -44,6 +44,7 @@
 		</div1>
 <div class="image">
 <?php
+if (!empty($_POST["gender"])){
 $gender = strval($_POST["gender"]);
 $agemin = intval($_POST["agemin"]);
 $agemax = intval($_POST["agemax"]);
@@ -68,6 +69,7 @@ foreach($goods_list as $arr) {
 			} 
 		}
 	}
+}
 }
 ?>
 </div>
