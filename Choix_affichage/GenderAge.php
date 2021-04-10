@@ -78,6 +78,42 @@ table, th, td {
 				}
 			} 
 			echo "</table>";
+		
+//associons les nouvelles valeurs à leur photo 
+			$genre=$_POST['gender'];
+			$ethnie=$_POST['ethnie'];
+			echo $genre;
+			echo $ethnie;
+			if (!empty($_POST['gender']) or !empty($_POST['ethnie'])){
+				$monfichier = fopen('dataset.csv','r');
+				$row = 1; // Variable pour numéroter les lignes
+				$newcontenu = '';
+				// Lecture du fichier ligne par ligne :
+				while (($ligne = fgets($monfichier)) !== FALSE){
+					// Si le numéro de la ligne est égal au numéro de la ligne à modifier :
+					if ($row == $_POST['changerG'] and !empty($genre)){
+						$lignesep=explode(";",$ligne);
+						// Variable contenant la nouvelle ligne :
+						$nouvelle_ligne = $_POST['changerG'] . ';' . $lignesep[0] . ';' . $lignesep[1] . ';' . $genre . ';' . $lignesep[3] . "\r\n";
+						$newcontenu = $newcontenu . $nouvelle_ligne;
+					}
+					else if($row == $_POST['changerE'] and !empty($genre)){
+						$lignesep=explode(";",$ligne);
+						// Variable contenant la nouvelle ligne :
+						$nouvelle_ligne = $_POST['changerE'] . ';' . $lignesep[0] . ';' . $lignesep[1] . ';' . $lignesep[2] . ';' . $ethnie . "\r\n";
+						$newcontenu = $newcontenu . $nouvelle_ligne;
+					}
+					// Sinon, on réécri la ligne
+					else{
+						$newcontenu = $newcontenu . $ligne;
+					}
+					$row++;    
+				}
+				fclose($monfichier);
+				//reecriture du fichier csv modifie
+				$fichierecriture = fopen('dataset.csv', 'w');
+				fputs($fichierecriture, $newcontenu);
+				fclose($fichierecriture);
     ?>
     	</body>
 </html>
