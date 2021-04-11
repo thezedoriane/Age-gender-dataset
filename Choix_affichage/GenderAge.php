@@ -3,11 +3,7 @@
 	<head>
 	<title>gender age dataset</title>
 	 <meta charset="UTF-8">
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-</style>
+	 <link rel="stylesheet" href="Age_gender2.css">
 	</head>
 	
 	<body>
