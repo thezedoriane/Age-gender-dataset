@@ -1,6 +1,15 @@
 body {
 	background-color: #FAEBD7;
 }
+
+.bienvenue {text-align:center;}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
 .selection {
   width: 1300px;
   height: 900px;
