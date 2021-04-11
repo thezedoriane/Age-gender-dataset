@@ -71,7 +71,7 @@
          checked>
   <label for='latino'>Latino</label><br>
   <p><button type='submit' name='changerE' value='".$num."'> submit </button></p>
-  </form></td><br>" ;
+  </form></td>" ;
 					echo "</tr>";
 					$num++;
 				}
