@@ -11,3 +11,4 @@ To do this project we used :
   - Request library
   - HTML
   - PHP
+  - CSS
