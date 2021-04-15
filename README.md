@@ -9,6 +9,6 @@ To do this project we used :
   - Python
   - Beautiful Soup library
   - Request library
-  - HTML
-  - PHP
+  - HTML 5
+  - PHP 7.4.14
   - CSS
