@@ -17,4 +17,4 @@ The organisation of the page have to look like this example. ![image](https://us
 
 Once the URL is entered, the program will ask you for the gender and then the ethnicity. If the csv file 'dataset.csv' doesn't exist yet it will be created in the same folder where your python file is saved and the person will be added in it. If it already exist, the person will be added in this file. 
 
-  If you don't want to create the database by yourself you can use the one we give in the github 'dataset.csv'. To create the website you will need
+  If you don't want to create the database by yourself you can use the one we give in the github 'dataset.csv'. To create the website you will need to use all the programs in the folder 'Création du site' and save them in the same folder as your csv file. To acces the website you need to 
