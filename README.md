@@ -8,3 +8,5 @@ This website enables people to choose which photo they wanted to see according t
 To do this project we used :
   - python
   - beautiful Soup library
+  - html
+  - php
