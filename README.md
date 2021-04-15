@@ -6,7 +6,8 @@ We decided to push the project further by creating a website.
 This website enables people to choose which photo they wanted to see according to some criteria as the age or the gender. It also enables to change the gender or the ethnie because, as it can't be defined by a computer, it's to human to enter it. So it will be easier to correct these data if there are mistakes or just to enter them.
 
 To do this project we used :
-  - python
-  - beautiful Soup library
-  - html
-  - php
+  - Python
+  - Beautiful Soup library
+  - Request library
+  - HTML
+  - PHP
