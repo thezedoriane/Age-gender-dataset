@@ -9,8 +9,8 @@ To do this project we used :
   - Python
   - HTML5
   - CSS
-  - PHP
+  - PHP 7.4.14
 
 How to use the code :
-  To do the data collection by yourself you will need to use the code from collect.py and so import the Request and Beautiful Soup libraries. You only have to run the code and you will be asked for a URL in the console. This URL have to be the URL from a french wikipedia page respecting some conditions. Indeed, only pages with a photo, a description of the photo containing the year of the photo and whose box containing the person's information begins with "Nom de Naissance" can be added to the database.
+  To do the data collection by yourself you will need to use the code from collect.py and so import the Request and Beautiful Soup libraries. You only have to run the code and you will be asked for a URL in the console. This URL have to be the URL from a french wikipedia page respecting some conditions. Indeed, only pages with a photo, a description of the photo containing the year of the photo and whose box containing the person's information begins with "Nom de Naissance" can be added to the database./n
 The organisation of the page have to look like this example. ![image](https://user-images.githubusercontent.com/72499343/114832047-5633ef00-9dce-11eb-9040-675e0dd0fecb.png)
