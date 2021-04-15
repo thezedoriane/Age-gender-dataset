@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>Age gender dataset</title>
+<title>gender age dataset</title>
 <link rel="stylesheet" href="Age_gender2.css">
 </head>
 
